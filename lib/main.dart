@@ -28,7 +28,7 @@ class _MyAppState extends State<MyApp> {
   Future<void> splitCamera({required bool frontcamera}) async {
     _cameracontroller =
         CameraController(_cameras[(frontcamera) ? 1 : 0], ResolutionPreset.max);
-    _cameracontroller!.initialize().then((_) {
+    _cameracontroller!.initialize().then((_) {  
       if (!mounted) {
         return;
       }

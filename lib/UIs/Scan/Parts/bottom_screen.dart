@@ -1,4 +1,5 @@
 import 'package:camara_ui/UIs/Camera/camera_file.dart';
+import 'package:camara_ui/UIs/Scan/Parts/scanner.dart';
 import 'package:camara_ui/Utils/images.dart';
 import 'package:camara_ui/Widgets/bottom_sheet.dart';
 import 'package:camara_ui/Widgets/button.dart';
@@ -6,8 +7,10 @@ import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 
 class Bottom_Screen extends StatefulWidget {
-  const Bottom_Screen({super.key, this.cameraController});
+  const Bottom_Screen(
+      {super.key, this.cameraController, required this.changeCamera});
   final CameraController? cameraController;
+  final Future<void> Function({required bool frontcamera}) changeCamera;
   @override
   State<Bottom_Screen> createState() => _Bottom_ScreenState();
 }
@@ -27,6 +30,11 @@ class _Bottom_ScreenState extends State<Bottom_Screen> {
                   height: 50,
                   width: 50,
                   child: button(
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) =>
+                                Scanner(changeCamera: widget.changeCamera)));
+                      },
                       color: Colors.white,
                       image: Image.asset(
                         scanner,
@@ -41,9 +49,11 @@ class _Bottom_ScreenState extends State<Bottom_Screen> {
 
                 //click
                 GestureDetector(
-                  onTap: () {Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => Camera_File(),
-                      ));},
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => Camera_File(),
+                    ));
+                  },
                   /*async {
                     if (!widget.cameraController!.value.isInitialized) {
                       return null;

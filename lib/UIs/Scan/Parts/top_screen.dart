@@ -16,12 +16,12 @@ class Top_screen extends StatefulWidget {
 class _Top_screenState extends State<Top_screen> {
   bool ison = false;
 
-  _switchlight() async {
-    ison ? await TorchLight.disableTorch() : await TorchLight.enableTorch();
-    setState(() {
-      ison = !ison;
-    });
-  }
+  // _switchlight() async {
+  //   ison ? await TorchLight.disableTorch() : await TorchLight.enableTorch();
+  //   setState(() {
+  //     ison = !ison;
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +59,7 @@ class _Top_screenState extends State<Top_screen> {
                 width: 25,
               ),
               onPressed: () {
-                _switchlight();
+                //_switchlight();
               },
             )),
       ],

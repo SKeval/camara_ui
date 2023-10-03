@@ -28,6 +28,7 @@ class _Camara_ScreenState extends State<Camara_Screen> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
 
     return SafeArea(
       child: Stack(
@@ -53,7 +54,7 @@ class _Camara_ScreenState extends State<Camara_Screen> {
                     var camera = widget.cameraController!.value;
                     final fullSize = MediaQuery.of(context).size;
                     final size = Size(fullSize.width,
-                        fullSize.height - (Platform.isIOS ? 90 : 60));
+                        fullSize.height - (Platform.isIOS ? 90 : 0));
                     double scale;
                     try {
                       scale = size.aspectRatio * camera.aspectRatio;
@@ -64,21 +65,15 @@ class _Camara_ScreenState extends State<Camara_Screen> {
                     return ClipRRect(
                       borderRadius: BorderRadius.circular(12),
                       child: Transform.scale(
-                          scale: scale,
-                          child: Center(
-                            child: LimitedBox(
-                              maxWidth: size.width,
-                              child: CameraPreview(widget.cameraController!),
-                            ),
-                          )),
+                        scale: scale,
+                        child: Center(
+                            child: CameraPreview(widget.cameraController!)),
+                      ),
                     );
                   }),
                 ),
-          Padding(
-            padding: const EdgeInsets.only(top: 8.0),
-            child: Top_screen(),
-          ),
-          Bottom_Screen(),
+          Top_screen(),
+          Bottom_Screen(changeCamera: widget.changeCamera),
           Positioned(
               bottom: 0,
               child: Container(
@@ -117,3 +112,10 @@ class _Camara_ScreenState extends State<Camara_Screen> {
     );
   }
 }
+/*
+                   Container(
+                    height: height / 1,
+                    decoration:
+                        BoxDecoration(borderRadius: BorderRadius.circular(50)),
+                    child: CameraPreview(widget.cameraController!),
+                  )*/

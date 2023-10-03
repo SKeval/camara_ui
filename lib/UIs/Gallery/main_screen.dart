@@ -37,28 +37,15 @@ class _Gallery_ScreenState extends State<Gallery_Screen> {
                 child: Column(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(top: 8.0),
+                      padding: const EdgeInsets.only(top: 8.0, bottom: 8),
                       child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          button(
-                            bgcolor: const Color.fromARGB(255, 94, 89, 89),
-                            icon: Icons.keyboard_arrow_down_sharp,
-                            color: Colors.black,
-                            onPressed: () {
-                              Navigator.of(context).pop();
-                            },
+                          Image.asset(gallery),
+                          SizedBox(
+                            width: 5,
                           ),
-                          SizedBox(width: width / 3.7),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Image.asset(gallery),
-                              SizedBox(
-                                width: 5,
-                              ),
-                              text("Dairy", size: 20),
-                            ],
-                          ),
+                          text("Dairy", size: 20),
                         ],
                       ),
                     ),
@@ -79,7 +66,19 @@ class _Gallery_ScreenState extends State<Gallery_Screen> {
                   ],
                 ),
               ),
-            ))
+            )),
+        Positioned(
+          left: 15,
+          top: 50,
+          child: button(
+            bgcolor: const Color.fromARGB(255, 94, 89, 89),
+            icon: Icons.keyboard_arrow_down_sharp,
+            color: Colors.black,
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+          ),
+        ),
       ],
     );
   }
@@ -94,4 +93,14 @@ GridView.extent(
                               color: Sliver,
                             );
                           })),
+
+
+
+
+
+
+
+
+
+                          
 */

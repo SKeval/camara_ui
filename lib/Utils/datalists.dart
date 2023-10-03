@@ -1,3 +1,4 @@
+import 'package:camara_ui/Utils/text.dart';
 import 'package:flutter/material.dart';
 
 List<DropdownMenuItem<dynamic>>? items = [
@@ -7,4 +8,23 @@ List<DropdownMenuItem<dynamic>>? items = [
   )
 ];
 
-
+List<DropdownMenuItem<String>> listDropDown = [
+  DropdownMenuItem(
+      value: 'English',
+      child: text("English", color: Colors.black, weight: FontWeight.bold)),
+  DropdownMenuItem(
+      value: 'తెలుగు',
+      child: text("తెలుగు", color: Colors.black, weight: FontWeight.bold)),
+  DropdownMenuItem(
+      value: 'हिंदी',
+      child: text("हिंदी", color: Colors.black, weight: FontWeight.bold)),
+  DropdownMenuItem(
+      value: 'ಕನ್ನಡ',
+      child: text("ಕನ್ನಡ", color: Colors.black, weight: FontWeight.bold)),
+  DropdownMenuItem(
+      value: 'தமிழ்',
+      child: text("தமிழ்", color: Colors.black, weight: FontWeight.bold)),
+  DropdownMenuItem(
+      value: 'മലയാളം',
+      child: text("മലയാളം", color: Colors.black, weight: FontWeight.bold)),
+];
