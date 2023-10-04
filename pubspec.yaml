@@ -38,6 +38,11 @@ dependencies:
   camera: ^0.10.5+5
   torch_light: ^1.0.0
   google_fonts: ^6.1.0
+  get: ^4.6.6
+  tflite_flutter: ^0.10.2
+  flutter_tflite: ^1.0.1
+  path_provider: ^2.1.1
+  path: ^1.8.3
 
 dev_dependencies:
   flutter_test:
@@ -64,6 +69,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/camera/
+    - assets/machine_learning/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

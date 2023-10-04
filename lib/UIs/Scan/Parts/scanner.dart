@@ -1,6 +1,7 @@
 import 'dart:io';
 
 //import 'package:camara_ui/UIs/Scan/Parts/scan_detection.dart';
+import 'package:camara_ui/UIs/Scan/Parts/scan_detect.dart';
 import 'package:camara_ui/Utils/colors.dart';
 import 'package:camara_ui/Utils/datalists.dart';
 import 'package:camara_ui/Utils/images.dart';
@@ -78,6 +79,7 @@ class _ScannerState extends State<Scanner> {
                 ),
               )),
           //mddle
+          //Scan_Detect(),
           Positioned(
               top: 120,
               child: Image.asset(

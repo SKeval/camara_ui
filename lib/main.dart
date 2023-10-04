@@ -1,6 +1,7 @@
 import 'package:camara_ui/UIs/Scan/camara_screen.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 late List<CameraDescription> _cameras;
 
@@ -28,7 +29,7 @@ class _MyAppState extends State<MyApp> {
   Future<void> splitCamera({required bool frontcamera}) async {
     _cameracontroller =
         CameraController(_cameras[(frontcamera) ? 1 : 0], ResolutionPreset.max);
-    _cameracontroller!.initialize().then((_) {  
+    _cameracontroller!.initialize().then((_) {
       if (!mounted) {
         return;
       }
@@ -66,8 +67,11 @@ class _MyAppState extends State<MyApp> {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
         debugShowCheckedModeBanner: false,
+
+        //initialRoute: "/splash",
+        // getPages: [],
         title: 'Flutter Demo',
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(
@@ -77,6 +81,7 @@ class _MyAppState extends State<MyApp> {
         home: Camara_Screen(
           cameraController: _cameracontroller!,
           changeCamera: splitCamera,
+          cameras: _cameras,
         ));
   }
 }

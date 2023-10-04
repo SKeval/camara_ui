@@ -1,4 +1,5 @@
 import 'package:camara_ui/Utils/text.dart';
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 
 List<DropdownMenuItem<dynamic>>? items = [
@@ -7,6 +8,11 @@ List<DropdownMenuItem<dynamic>>? items = [
     child: Icon(Icons.flash_on),
   )
 ];
+
+List<CameraDescription> _cameras = [];
+List<CameraDescription> getCameras() {
+  return _cameras;
+}
 
 List<DropdownMenuItem<String>> listDropDown = [
   DropdownMenuItem(

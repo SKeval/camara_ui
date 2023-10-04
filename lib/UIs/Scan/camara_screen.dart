@@ -15,8 +15,12 @@ import 'package:flutter/material.dart';
 
 class Camara_Screen extends StatefulWidget {
   const Camara_Screen(
-      {super.key, required this.cameraController, required this.changeCamera});
-  final CameraController? cameraController;
+      {super.key,
+      required this.cameraController,
+      required this.changeCamera,
+      required this.cameras});
+  final CameraController cameraController;
+  final List<CameraDescription> cameras;
   final Future<void> Function({required bool frontcamera}) changeCamera;
 
   @override
@@ -67,13 +71,18 @@ class _Camara_ScreenState extends State<Camara_Screen> {
                       child: Transform.scale(
                         scale: scale,
                         child: Center(
-                            child: CameraPreview(widget.cameraController!)),
+                            child: CameraPreview(widget.cameraController)),
                       ),
                     );
                   }),
                 ),
-          Top_screen(),
-          Bottom_Screen(changeCamera: widget.changeCamera),
+          Top_screen(
+              cameras: widget.cameras,
+              changeCamera: widget.changeCamera,
+              cameraController: widget.cameraController),
+          Bottom_Screen(
+              changeCamera: widget.changeCamera,
+              cameraController: widget.cameraController),
           Positioned(
               bottom: 0,
               child: Container(
