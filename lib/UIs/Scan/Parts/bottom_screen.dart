@@ -1,7 +1,9 @@
+// ignore_for_file: camel_case_types
+
 import 'package:camara_ui/UIs/Camera/camera_file.dart';
+import 'package:camara_ui/UIs/Scan/Parts/filters.dart';
 import 'package:camara_ui/UIs/Scan/Parts/scanner.dart';
 import 'package:camara_ui/Utils/images.dart';
-import 'package:camara_ui/Widgets/bottom_sheet.dart';
 import 'package:camara_ui/Widgets/button.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
@@ -43,7 +45,7 @@ class _Bottom_ScreenState extends State<Bottom_Screen> {
                       )),
                 ),
 
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
 
@@ -51,20 +53,21 @@ class _Bottom_ScreenState extends State<Bottom_Screen> {
                 GestureDetector(
                   onTap: () async {
                     if (!widget.cameraController.value.isInitialized) {
-                      return null;
+                      return;
                     }
                     if (widget.cameraController.value.isTakingPicture) {
-                      return null;
+                      return;
                     }
                     try {
                       // await widget.cameraController.setFlashMode(FlashMode.auto);
                       XFile file = await widget.cameraController.takePicture();
+                      // ignore: use_build_context_synchronously
                       Navigator.of(context).push(MaterialPageRoute(
                         builder: (context) => Camera_File(file: file),
                       ));
                     } on CameraException catch (e) {
                       debugPrint("Error : $e");
-                      return null;
+                      return;
                     }
                   },
                   /*async {
@@ -90,7 +93,7 @@ class _Bottom_ScreenState extends State<Bottom_Screen> {
                   ),
                 ),
 
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
 
@@ -99,6 +102,11 @@ class _Bottom_ScreenState extends State<Bottom_Screen> {
                   height: 50,
                   width: 50,
                   child: button(
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => const Filters_Page(),
+                        ));
+                      },
                       color: Colors.white,
                       image: Image.asset(
                         filter,

@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'package:camara_ui/Utils/images.dart';
 import 'package:camara_ui/Utils/text.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +23,7 @@ class _Scanner_DownPartState extends State<Scanner_DownPart> {
             child: Container(
               height: height / 10,
               width: width,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius:
                       BorderRadius.vertical(top: Radius.circular(20))),

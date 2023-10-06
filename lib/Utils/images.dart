@@ -13,3 +13,21 @@ String close = 'assets/camera/image 454.png';
 String location = 'assets/camera/image 495.png';
 String translator = 'assets/camera/image 494.png';
 String scan = 'assets/camera/scan-1.png';
+
+
+//Filters
+String search = 'assets/Filters/search.png';
+String baloon = 'assets/Filters/baloon.png';
+String beach = 'assets/Filters/beach.png';
+String cart = 'assets/Filters/cart.png';
+String fair = 'assets/Filters/fair.png';
+String firelight = 'assets/Filters/firelight.png';
+String food = 'assets/Filters/food.png';
+String hand = 'assets/Filters/hand.png';
+String message = 'assets/Filters/message.png';
+String rangoli = 'assets/Filters/rangoli.png';
+String star = 'assets/Filters/star.png';
+String temple = 'assets/Filters/temple.png';
+String yoga = 'assets/Filters/yoga.png';
+String face= 'assets/Filters/face.png';
+String heart = 'assets/Filters/heart.png';

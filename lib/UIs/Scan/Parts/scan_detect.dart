@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'dart:developer';
 
 import 'package:camera/camera.dart';
@@ -96,6 +98,6 @@ class _Scan_DetectState extends State<Scan_Detect> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return const Scaffold();
   }
 }

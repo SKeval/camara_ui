@@ -5,11 +5,8 @@ import 'package:camara_ui/UIs/Scan/Parts/bottom_screen.dart';
 import 'package:camara_ui/UIs/Scan/Parts/top_screen.dart';
 import 'package:camara_ui/UIs/Gallery/main_screen.dart';
 import 'package:camara_ui/Utils/colors.dart';
-import 'package:camara_ui/Utils/datalists.dart';
 import 'package:camara_ui/Utils/images.dart';
 import 'package:camara_ui/Utils/text.dart';
-import 'package:camara_ui/Widgets/bottom_sheet.dart';
-import 'package:camara_ui/Widgets/button.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 
@@ -32,7 +29,6 @@ class _Camara_ScreenState extends State<Camara_Screen> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
 
     return SafeArea(
       child: Stack(
@@ -47,15 +43,13 @@ class _Camara_ScreenState extends State<Camara_Screen> {
               : GestureDetector(
                   //change camera sides
                   onDoubleTap: () async {
-                    if (widget.cameraController != null) {
-                      isfront = !isfront;
-                      setState(() {
-                        widget.changeCamera(frontcamera: isfront);
-                      });
-                    }
-                  },
+                    isfront = !isfront;
+                    setState(() {
+                      widget.changeCamera(frontcamera: isfront);
+                    });
+                                    },
                   child: Builder(builder: (BuildContext builder) {
-                    var camera = widget.cameraController!.value;
+                    var camera = widget.cameraController.value;
                     final fullSize = MediaQuery.of(context).size;
                     final size = Size(fullSize.width,
                         fullSize.height - (Platform.isIOS ? 90 : 0));
@@ -88,7 +82,7 @@ class _Camara_ScreenState extends State<Camara_Screen> {
               child: Container(
                 height: 50,
                 width: width,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     color: Colors.black,
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(20),
@@ -96,14 +90,14 @@ class _Camara_ScreenState extends State<Camara_Screen> {
                 child: GestureDetector(
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => Gallery_Screen(),
+                      builder: (context) => const Gallery_Screen(),
                     ));
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Image.asset(gallery),
-                      SizedBox(
+                      const SizedBox(
                         width: 5,
                       ),
                       text(

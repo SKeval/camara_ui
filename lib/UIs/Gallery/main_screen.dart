@@ -1,7 +1,8 @@
+// ignore_for_file: camel_case_types
+
 import 'package:camara_ui/Utils/colors.dart';
 import 'package:camara_ui/Utils/images.dart';
 import 'package:camara_ui/Utils/text.dart';
-import 'package:camara_ui/Widgets/bottom_sheet.dart';
 import 'package:camara_ui/Widgets/button.dart';
 import 'package:flutter/material.dart';
 
@@ -27,7 +28,7 @@ class _Gallery_ScreenState extends State<Gallery_Screen> {
             child: Container(
               height: height / 1.05,
               width: width,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   color: Colors.black,
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(20),
@@ -42,7 +43,7 @@ class _Gallery_ScreenState extends State<Gallery_Screen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Image.asset(gallery),
-                          SizedBox(
+                          const SizedBox(
                             width: 5,
                           ),
                           text("Dairy", size: 20),
@@ -51,18 +52,18 @@ class _Gallery_ScreenState extends State<Gallery_Screen> {
                     ),
                     Expanded(
                         child: GridView(
-                            children: List<Widget>.generate(50, (index) {
-                              return Container(
-                                color: Sliver,
-                              );
-                            }),
                             gridDelegate:
-                                SliverGridDelegateWithMaxCrossAxisExtent(
+                                const SliverGridDelegateWithMaxCrossAxisExtent(
                               maxCrossAxisExtent: 150,
                               childAspectRatio: 9 / 16,
                               crossAxisSpacing: 10,
                               mainAxisSpacing: 10,
-                            )))
+                            ),
+                            children: List<Widget>.generate(50, (index) {
+                              return Container(
+                                color: Sliver,
+                              );
+                            })))
                   ],
                 ),
               ),

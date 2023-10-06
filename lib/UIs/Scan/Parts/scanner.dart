@@ -1,8 +1,5 @@
-import 'dart:io';
 
 //import 'package:camara_ui/UIs/Scan/Parts/scan_detection.dart';
-import 'package:camara_ui/UIs/Scan/Parts/scan_detect.dart';
-import 'package:camara_ui/Utils/colors.dart';
 import 'package:camara_ui/Utils/datalists.dart';
 import 'package:camara_ui/Utils/images.dart';
 import 'package:camara_ui/Utils/text.dart';
@@ -40,7 +37,7 @@ class _ScannerState extends State<Scanner> {
               child: Container(
                 height: height / 1.05,
                 width: width,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     color: Colors.black,
                     borderRadius:
                         BorderRadius.vertical(top: Radius.circular(20))),
@@ -101,9 +98,9 @@ class _ScannerState extends State<Scanner> {
                         )
                       : Center(
                           child: DropdownButton(
-                            underline: SizedBox(),
+                            underline: const SizedBox(),
                             value: dropdownValue,
-                            icon: Icon(Icons.keyboard_arrow_down_outlined),
+                            icon: const Icon(Icons.keyboard_arrow_down_outlined),
                             items: listDropDown,
                             onChanged: (value) {
                               setState(() {
@@ -119,7 +116,7 @@ class _ScannerState extends State<Scanner> {
               child: Container(
                 height: height / 10,
                 width: width,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius:
                         BorderRadius.vertical(top: Radius.circular(20))),
@@ -128,7 +125,6 @@ class _ScannerState extends State<Scanner> {
                   children: [
                     GestureDetector(
                       onTap: () {
-                        print('location');
                         setState(() {
                           locator = 0;
                         });
@@ -150,7 +146,6 @@ class _ScannerState extends State<Scanner> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        print('translator');
                         setState(() {
                           locator = 1;
                         });

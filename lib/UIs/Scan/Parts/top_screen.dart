@@ -1,10 +1,9 @@
-import 'package:camara_ui/Utils/colors.dart';
+// ignore_for_file: must_be_immutable, camel_case_types
+
 import 'package:camara_ui/Utils/images.dart';
 import 'package:camara_ui/Widgets/button.dart';
 import 'package:camera/camera.dart';
-import 'package:camara_ui/Utils/datalists.dart';
 import 'package:flutter/material.dart';
-import 'package:torch_light/torch_light.dart';
 
 class Top_screen extends StatefulWidget {
   Top_screen(

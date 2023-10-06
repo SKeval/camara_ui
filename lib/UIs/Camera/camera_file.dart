@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'dart:io';
 
 import 'package:camara_ui/Utils/images.dart';
@@ -39,7 +41,7 @@ class _Camera_FileState extends State<Camera_File> {
                   width: 25,
                 ),
                 color: Colors.black,
-                bgcolor: Color.fromARGB(255, 94, 89, 89),
+                bgcolor: const Color.fromARGB(255, 94, 89, 89),
               )),
           Positioned(
               top: height / 11,
@@ -50,7 +52,7 @@ class _Camera_FileState extends State<Camera_File> {
                   height: 25,
                   width: 25,
                 ),
-                bgcolor: Color.fromARGB(255, 94, 89, 89),
+                bgcolor: const Color.fromARGB(255, 94, 89, 89),
               )),
 
           //image
@@ -59,7 +61,7 @@ class _Camera_FileState extends State<Camera_File> {
               child: Container(
                 height: height / 1.2,
                 width: width,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     borderRadius:
                         BorderRadius.vertical(top: Radius.circular(20)),
                     color: Colors.white),
@@ -73,7 +75,7 @@ class _Camera_FileState extends State<Camera_File> {
               child: Container(
                 height: height / 10,
                 width: width,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     borderRadius:
                         BorderRadius.vertical(top: Radius.circular(20)),
                     color: Colors.black),

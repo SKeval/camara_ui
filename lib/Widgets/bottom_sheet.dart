@@ -13,7 +13,7 @@ showBottom(BuildContext context) {
     isScrollControlled: true,
     builder: (context) {
       return Container(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         height: height / 1.1,
         child: Column(
           children: [
@@ -30,7 +30,7 @@ showBottom(BuildContext context) {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Image.asset(gallery),
-                    SizedBox(
+                    const SizedBox(
                       width: 5,
                     ),
                     text("Dairy", size: 20),
@@ -38,7 +38,7 @@ showBottom(BuildContext context) {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Expanded(
