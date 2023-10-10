@@ -40,8 +40,9 @@ class _Top_screenState extends State<Top_screen> {
             child: button(
                 image: Image.asset(
               close,
-              height: 25,
-              width: 25,
+              height: 20,
+              color: Colors.white,
+              width: 20,
             ))),
         Positioned(
             top: 10,
@@ -49,8 +50,8 @@ class _Top_screenState extends State<Top_screen> {
             child: button(
               image: Image.asset(
                 camera,
-                height: 25,
-                width: 25,
+                height: 35,
+                width: 35,
               ),
               onPressed: () async {
                 isfront = !isfront;
@@ -65,8 +66,8 @@ class _Top_screenState extends State<Top_screen> {
             child: button(
               image: Image.asset(
                 flash,
-                height: 25,
-                width: 25,
+                height: 45,
+                width: 45,
               ),
               onPressed: () {
                 setState(() {

@@ -28,42 +28,16 @@ class _Camera_FileState extends State<Camera_File> {
           Container(
             color: Colors.black,
           ),
-          Positioned(
-              top: height / 11,
-              left: 15,
-              child: button(
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-                image: Image.asset(
-                  close,
-                  height: 25,
-                  width: 25,
-                ),
-                color: Colors.black,
-                bgcolor: const Color.fromARGB(255, 94, 89, 89),
-              )),
-          Positioned(
-              top: height / 11,
-              right: 15,
-              child: button(
-                image: Image.asset(
-                  save,
-                  height: 25,
-                  width: 25,
-                ),
-                bgcolor: const Color.fromARGB(255, 94, 89, 89),
-              )),
 
           //image
           Positioned(
               bottom: 0,
               child: Container(
-                height: height / 1.2,
+                height: height / 1.05,
                 width: width,
                 decoration: const BoxDecoration(
                     borderRadius:
-                        BorderRadius.vertical(top: Radius.circular(20)),
+                        BorderRadius.vertical(top: Radius.circular(30)),
                     color: Colors.white),
                 child: Image.file(
                   picture,
@@ -78,7 +52,7 @@ class _Camera_FileState extends State<Camera_File> {
                 decoration: const BoxDecoration(
                     borderRadius:
                         BorderRadius.vertical(top: Radius.circular(20)),
-                    color: Colors.black),
+                    color: Colors.white),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -87,7 +61,7 @@ class _Camera_FileState extends State<Camera_File> {
                       height: 50,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
-                          color: Colors.grey),
+                          color: Color.fromARGB(255, 28, 39, 76)),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -105,7 +79,7 @@ class _Camera_FileState extends State<Camera_File> {
                       height: 50,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
-                          color: Colors.grey),
+                          color: Color.fromARGB(255, 28, 39, 76)),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -120,7 +94,33 @@ class _Camera_FileState extends State<Camera_File> {
                     )
                   ],
                 ),
-              ))
+              )),
+          Positioned(
+              top: height / 15,
+              left: 15,
+              child: button(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                image: Image.asset(
+                  close,
+                  height: 25,
+                  width: 25,
+                ),
+                color: Colors.black,
+                bgcolor: const Color.fromARGB(255, 94, 89, 89),
+              )),
+          Positioned(
+              top: height / 15,
+              right: 15,
+              child: button(
+                image: Image.asset(
+                  save,
+                  height: 25,
+                  width: 25,
+                ),
+                bgcolor: const Color.fromARGB(255, 94, 89, 89),
+              )),
         ],
       ),
     );

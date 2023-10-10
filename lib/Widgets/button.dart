@@ -10,10 +10,11 @@ Widget button(
     Color? bgcolor}) {
   return FloatingActionButton.small(
       heroTag: null,
-      backgroundColor: bgcolor ?? Colors.white,
+      backgroundColor: bgcolor ?? const Color.fromARGB(100, 255, 255, 255),
       onPressed: onPressed,
-      child: image ?? Icon(
-              icon,
-              color: color ?? bgcolor,
-            ));
+      child: image ??
+          Icon(
+            icon,
+            color: color ?? bgcolor,
+          ));
 }

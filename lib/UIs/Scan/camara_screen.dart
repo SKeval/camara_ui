@@ -47,7 +47,7 @@ class _Camara_ScreenState extends State<Camara_Screen> {
                     setState(() {
                       widget.changeCamera(frontcamera: isfront);
                     });
-                                    },
+                  },
                   child: Builder(builder: (BuildContext builder) {
                     var camera = widget.cameraController.value;
                     final fullSize = MediaQuery.of(context).size;
@@ -83,7 +83,7 @@ class _Camara_ScreenState extends State<Camara_Screen> {
                 height: 50,
                 width: width,
                 decoration: const BoxDecoration(
-                    color: Colors.black,
+                    color: Colors.white,
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(20),
                         topRight: Radius.circular(20))),
@@ -102,6 +102,7 @@ class _Camara_ScreenState extends State<Camara_Screen> {
                       ),
                       text(
                         "Dairy",
+                        color: Colors.black,
                         size: 20,
                       )
                     ],

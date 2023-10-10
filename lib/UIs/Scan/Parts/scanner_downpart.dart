@@ -37,7 +37,7 @@ class _Scanner_DownPartState extends State<Scanner_DownPart> {
                       height: 50,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
-                          color: Colors.white),
+                          color: Color.fromARGB(255, 28, 39, 76)),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -61,7 +61,7 @@ class _Scanner_DownPartState extends State<Scanner_DownPart> {
                       height: 50,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
-                          color: Colors.white),
+                          color: Color.fromARGB(255, 28, 39, 76)),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -74,6 +74,26 @@ class _Scanner_DownPartState extends State<Scanner_DownPart> {
                               color: Colors.black,
                               weight: FontWeight.bold,
                               size: 16)
+                          /*
+                              Container(
+                      width: width / 2.5,
+                      height: 50,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12),
+                          color: Color.fromARGB(255, 28, 39, 76)),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            height: 35,
+                            width: 35,
+                            translator,
+                          ),
+                          text("Translator", weight: FontWeight.bold, size: 16)
+                        ],
+                      ),
+                    )
+                            */
                         ],
                       ),
                     ),

@@ -20,16 +20,13 @@ class _Gallery_ScreenState extends State<Gallery_Screen> {
     double width = MediaQuery.of(context).size.width;
     return Stack(
       children: [
-        Container(
-          color: Colors.white,
-        ),
         Positioned(
             bottom: 0,
             child: Container(
               height: height / 1.05,
               width: width,
               decoration: const BoxDecoration(
-                  color: Colors.black,
+                  color: Colors.white,
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(20),
                       topRight: Radius.circular(20))),
@@ -38,7 +35,7 @@ class _Gallery_ScreenState extends State<Gallery_Screen> {
                 child: Column(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(top: 8.0, bottom: 8),
+                      padding: const EdgeInsets.only(top: 8.0, bottom: 20),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -46,7 +43,7 @@ class _Gallery_ScreenState extends State<Gallery_Screen> {
                           const SizedBox(
                             width: 5,
                           ),
-                          text("Dairy", size: 20),
+                          text("Dairy", size: 20, color: Colors.black),
                         ],
                       ),
                     ),
@@ -72,8 +69,13 @@ class _Gallery_ScreenState extends State<Gallery_Screen> {
           left: 15,
           top: 50,
           child: button(
-            bgcolor: const Color.fromARGB(255, 94, 89, 89),
-            icon: Icons.keyboard_arrow_down_sharp,
+            bgcolor: Color(0xaaEBEBEB),
+            image: Image.asset(
+              down,
+              height: 25,
+              width: 25,
+              color: Colors.black,
+            ),
             color: Colors.black,
             onPressed: () {
               Navigator.of(context).pop();

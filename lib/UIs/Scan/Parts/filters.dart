@@ -27,8 +27,9 @@ class _Filters_PageState extends State<Filters_Page> {
               width: width,
               height: height / 1.038,
               decoration: BoxDecoration(
-                color: Background,
-                borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
+                color: Colors.white,
+                borderRadius:
+                    const BorderRadius.vertical(top: Radius.circular(20)),
               ),
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -36,7 +37,7 @@ class _Filters_PageState extends State<Filters_Page> {
                   //crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(bottom: 15),
+                      padding: const EdgeInsets.only(bottom: 15, top: 5),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -46,48 +47,89 @@ class _Filters_PageState extends State<Filters_Page> {
                               close,
                               scale: 3,
                             ),
-                            bgcolor: grey,
+                            bgcolor: Color(0xaaEBEBEB),
                             onPressed: () {
                               Navigator.of(context).pop();
                             },
                           ),
-                          text('XRpresso',
-                              size: 25,
-                              weight: FontWeight.bold,
-                              color: Common_white),
-                          button(image: Image.asset(search), bgcolor: grey),
+                          Container(
+                            width: width / 1.6,
+                            height: width / 9,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Color(0xaaEBEBEB),
+                            ),
+                            child: Center(
+                              child: text('XRpresso',
+                                  size: 25,
+                                  weight: FontWeight.bold,
+                                  color: Colors.black),
+                            ),
+                          ),
+                          button(
+                            image: Image.asset(search),
+                            bgcolor: Color(0xaaEBEBEB),
+                          ),
                         ],
                       ),
                     ),
                     Positioned(
-                      top: 60,
+                      top: 70,
                       child: Container(
                         width: width / 8,
                         decoration: BoxDecoration(
-                            color: grey,
+                            color: Color(0xaaEBEBEB),
                             borderRadius: BorderRadius.circular(10)),
                         child: Column(
                           children: [
-                            button(image: Image.asset(firelight)),
-                            button(image: Image.asset(message)),
-                            button(image: Image.asset(heart)),
-                            button(image: Image.asset(face)),
-                            button(image: Image.asset(rangoli)),
-                            button(image: Image.asset(baloon)),
-                            button(image: Image.asset(temple)),
-                            button(image: Image.asset(beach)),
-                            button(image: Image.asset(cart)),
-                            button(image: Image.asset(food)),
-                            button(image: Image.asset(fair)),
-                            button(image: Image.asset(star)),
-                            button(image: Image.asset(hand)),
-                            button(image: Image.asset(yoga)),
+                            button(
+                                image: Image.asset(firelight),
+                                bgcolor: Colors.white),
+                            button(
+                                image: Image.asset(message),
+                                bgcolor: Colors.white),
+                            button(
+                                image: Image.asset(heart),
+                                bgcolor: Colors.white),
+                            button(
+                                image: Image.asset(face),
+                                bgcolor: Colors.white),
+                            button(
+                                image: Image.asset(rangoli),
+                                bgcolor: Colors.white),
+                            button(
+                                image: Image.asset(baloon),
+                                bgcolor: Colors.white),
+                            button(
+                                image: Image.asset(temple),
+                                bgcolor: Colors.white),
+                            button(
+                                image: Image.asset(beach),
+                                bgcolor: Colors.white),
+                            button(
+                                image: Image.asset(cart),
+                                bgcolor: Colors.white),
+                            button(
+                                image: Image.asset(food),
+                                bgcolor: Colors.white),
+                            button(
+                                image: Image.asset(fair),
+                                bgcolor: Colors.white),
+                            button(
+                                image: Image.asset(star),
+                                bgcolor: Colors.white),
+                            button(
+                                image: Image.asset(hand),
+                                bgcolor: Colors.white),
+                            button(
+                                image: Image.asset(yoga),
+                                bgcolor: Colors.white),
                           ],
                         ),
                       ),
                     ),
                     Positioned(
-                      top: 60,
+                      top: 70,
                       right: 0,
                       child: SizedBox(
                         height: height,

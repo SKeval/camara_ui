@@ -1,6 +1,6 @@
 import 'package:camara_ui/UIs/Scan/camara_screen.dart';
 import 'package:camera/camera.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart'; 
 import 'package:get/get.dart';
 
 late List<CameraDescription> _cameras;

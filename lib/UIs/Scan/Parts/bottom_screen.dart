@@ -38,10 +38,11 @@ class _Bottom_ScreenState extends State<Bottom_Screen> {
                                 Scanner(changeCamera: widget.changeCamera)));
                       },
                       color: Colors.white,
+                      bgcolor: Colors.white,
                       image: Image.asset(
                         scanner,
-                        height: 50,
-                        width: 50,
+                        height: 40,
+                        width: 40,
                       )),
                 ),
 
@@ -108,6 +109,7 @@ class _Bottom_ScreenState extends State<Bottom_Screen> {
                         ));
                       },
                       color: Colors.white,
+                      bgcolor: Colors.white,
                       image: Image.asset(
                         filter,
                         height: 50,
